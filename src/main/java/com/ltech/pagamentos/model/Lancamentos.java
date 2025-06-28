@@ -1,5 +1,6 @@
 package com.ltech.pagamentos.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -35,5 +36,8 @@ public class Lancamentos {
 
     @ManyToOne
     private FundoFinanceiro fundoFinanceiro;
+
+    @Column(precision = 19, scale = 2)
+    private BigDecimal valor;
 
 }
